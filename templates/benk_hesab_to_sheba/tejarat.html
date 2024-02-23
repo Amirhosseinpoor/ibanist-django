@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}تبدیل شماره حساب به شبا{% endblock %}
+{% block head %}
+    {{ super }}
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row text-center">
+      <div class="col-sm">
+        <h3>شماره حساب را وارد کنید:</h3>
+        <div class="form-group">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <label  class="col-sm-2 col-form-label" >شماره حساب  :</label>
+                <input name="an_h" required><br><br>
+                <input name="bank_h" value="2" type="hidden">
+                <input class="btn btn-primary" type="submit" value="محاسبه">
+            </form>
+            <br></br>
+            <a class="btn btn-outline-primary" href="/" role="button">
+                بازگشت به صفحه اصلی
+            </a>
+              <br></br>
+        </div>
+      </div>
+    </div></div>
+{% endblock %}

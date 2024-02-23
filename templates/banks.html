@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+خانه|شبایاب
+{% endblock %}
+{% block head %}
+    {{ super }}
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+{% endblock %}
+
+{% block content %}
+<div class="row text-center">
+   <div class="col-md-12">
+     <div class="hero-img wow fadeIn">
+       <img class="img-fluid" src="{% static 'static/big.png' %}" alt="Home">
+     </div>
+   </div>
+   <div id="products" class="features wow fadeInDown">
+     <div class="container-m">
+       <div class="row text-center">
+         <div class="col-md-12">
+           <div class="features-intro">
+             <h2>بانک مورد نظر خود را انتخاب کنید.</h2>
+             <p>از این لیست بانک مورد نظر خود را انتخاب تا به صفحه محاسبه شبا هدایت شوید </p>
+           </div>
+         </div>
+           <form method="post">
+         <div class="container-fluid">
+            <div class="row">
+                  <div class="col-sm text-center">
+                     <div class="views-field views-field-field-image">
+                        <div  class="field-content"><a href="{% url 'keshavarzi' %}" ><img typeof="foaf:Image" src="{% static 'keshavarzi.png' %}" alt="" width="150" height="150"></a></div>
+                     </div>
+                     <div class="text-center"><span class="field-content"><a href="{% url 'keshavarzi' %}" >بانک کشاورزی</a></span></div>
+                  </div>
+                  <div class="col-sm text-center">
+                     <div class="views-field views-field-field-image">
+                        <div class="field-content"><a href="{% url 'tejarat' %}" ><img typeof="foaf:Image" src="{% static 'tejarat.png' %}" alt="" width="150" height="150"></a></div>
+                     </div>
+                     <div class="text-center"><span class="field-content"><a href="{% url 'tejarat' %}" >بانک تجارت </a></span></div>
+                  </div>
+                  <div class="col-sm text-center">
+                     <div class="views-field views-field-field-image">
+                        <div class="field-content"><a href="{% url 'refah' %}" ><img typeof="foaf:Image" src="{% static 'refah.png' %}" alt="" width="150" height="150"></a></div>
+                     </div>
+                     <div class="text-center"><span class="field-content"><a href="{% url 'refah' %}" >بانک رفاه</a></span></div>
+                  </div>
+            </div></div>
+               </form>
+                </div>
+              </div>
+            </div>
+          </div> {% endblock %}
+    
+
